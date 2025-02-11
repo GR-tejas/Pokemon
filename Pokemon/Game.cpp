@@ -1,31 +1,30 @@
-#include "Player.hpp"
 #include "Game.hpp"
+#include "Player.hpp"
+#include "PokemonType.hpp"
 #include "Utility.hpp"
 #include "WildEncounterManager.hpp"
 
 #include <iostream>
 using namespace std;
 
-Grass forestGrass = {
+Game::Game() {
+    forestGrass = {
     "Forest",
     {{"Pidgey", PokemonType::NORMAL, 40}, {"Caterpie", PokemonType::BUG, 35}},
     70
-};
+    };
 
-Grass caveGrass = {
+    caveGrass = {
     "Cave",
     {{"Zubat", PokemonType::POISON, 30}, {"Geodude", PokemonType::ROCK, 50}},
     80
-};
+    };
 
-Grass shallowWater = {
+    shallowWater = {
     "Cave",
     {{"Staryu", PokemonType::WATER, 40}, {"Tentacool", PokemonType::POISON, 40}},
     80
-};
-
-Game::Game() {
-
+    };
 }
 
 void Game::gameLoop(Player& player) {
@@ -54,8 +53,7 @@ void Game::gameLoop(Player& player) {
         case 1: {
             // Create a scope within case 1
             WildEncounterManager encounterManager;
-            Pokemon encounteredPokemon =
-                encounterManager.getRandomPokemonFromGrass(forestGrass);
+            Pokemon encounteredPokemon = encounterManager.getRandomPokemonFromGrass(forestGrass);
             cout << "A wild " << encounteredPokemon.name << " appeared!\n";
             break;
         }

@@ -2,6 +2,7 @@
 #include<string>
 #include<vector>
 #include"Pokemon.hpp"
+#include"WildEncounterManager.hpp"
 using namespace std;
 
 struct Grass {
