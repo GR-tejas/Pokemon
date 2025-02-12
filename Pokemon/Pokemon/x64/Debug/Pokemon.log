@@ -1,1 +1,25 @@
-﻿  Pokemon.vcxproj -> C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\x64\Debug\Pokemon.exe
+﻿  Game.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,14): error C3646: 'getRandomPokemonFromGrass': unknown override specifier
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,39): error C2059: syntax error: '('
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,59): error C2238: unexpected token(s) preceding ';'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Game.cpp(56,59): error C2039: 'getRandomPokemonFromGrass': is not a member of 'WildEncounterManager'
+  main.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,14): error C3646: 'getRandomPokemonFromGrass': unknown override specifier
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,39): error C2059: syntax error: '('
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,59): error C2238: unexpected token(s) preceding ';'
+  Player.cpp
+  Pokemon.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Pokemon.cpp(30,13): warning C4101: 'damagel': unreferenced local variable
+  ProfessorOak.cpp
+  WildEncounterManager.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,14): error C3646: 'getRandomPokemonFromGrass': unknown override specifier
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,39): error C2059: syntax error: '('
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.hpp(7,59): error C2238: unexpected token(s) preceding ';'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(5,23): error C2600: 'WildEncounterManager::WildEncounterManager': cannot define a compiler-generated special member function (must be declared in the class first)
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(6,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(9,35): error C2039: 'getRandomPokemonFromGrass': is not a member of 'WildEncounterManager'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(9,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(9,35): error C2146: syntax error: missing ';' before identifier 'getRandomPokemonFromGrass'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(9,81): error C2143: syntax error: missing ';' before '{'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\WildEncounterManager.cpp(9,81): error C2447: '{': missing function header (old-style formal list?)
+  Generating Code...
