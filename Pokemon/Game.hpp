@@ -1,6 +1,5 @@
 #pragma once
 #include "Grass.hpp"
-#include "Game.hpp"
 
 class Player;
 
