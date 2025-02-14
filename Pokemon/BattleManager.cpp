@@ -1,26 +1,40 @@
 #include<iostream>
 #include "Pokemon.hpp"
-
+#include"BattleManager.hpp"
 
 using namespace std;
-class BattleManager
+
+void BattleManager::startBattle(Player& player, Pokemon& wildPokemon) 
 {
-    void battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
-        cout << "A wild " << wildPokemon.name << " appeared!\\n";
+    std::cout << "A wild " << wildPokemon.name << " appeared!\n";
+    battle(player.chosenPokemon, wildPokemon);
+}
 
-        while (!playerPokemon.isFainted() && !wildPokemon.isFainted()) {
-            playerPokemon.attack(wildPokemon); // Player attacks first
+void BattleManager::battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
+    while (!playerPokemon.isFainted() && !wildPokemon.isFainted()) 
+    {
+        playerPokemon.attack(wildPokemon);
 
-            if (!wildPokemon.isFainted()) {
-                wildPokemon.attack(playerPokemon); // Wild Pokémon attacks back
-            }
+        // Check if wild Pokémon fainted
+        if (!wildPokemon.isFainted()) 
+        {
+            wildPokemon.attack(playerPokemon);
         }
 
-        if (playerPokemon.isFainted()) {
-            cout << playerPokemon.name << " has fainted! You lose the battle.\\n";
-        }
-        else {
-            cout << "You defeated the wild " << wildPokemon.name << "!\\n";
-        }
+        Utility::waitForEnter();
     }
-};
+
+    // Determine and display the outcome of the battle
+    handleBattleOutcome(playerPokemon, wildPokemon.isFainted());//this function needs thes args
+}
+
+void BattleManager::handleBattleOutcome(Player& player, bool playerWon) {//i need player here
+    if (playerWon) {
+        std::cout << player.chosenPokemon.name << " is victorious! Keep an eye on your Pokémon's health.\n";
+    }
+    else {
+        std::cout << "Oh no! " << player.chosenPokemon.name << " fainted! You need to visit the PokeCenter.\n";
+        Utility::waitForEnter();
+        std::cout << "Game Over.\n";
+    }
+}

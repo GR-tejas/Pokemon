@@ -1,6 +1,4 @@
-﻿  Game.cpp
-  main.cpp
-  WildEncounterManager.cpp
-C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\WildEncounterManager.cpp(8,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  BattleManager.cpp
+  Game.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\BattleManager.cpp(28,5): error C2664: 'void BattleManager::handleBattleOutcome(Player &,bool)': cannot convert argument 1 from 'Pokemon' to 'Player &'
   Generating Code...
-  Pokemon.vcxproj -> C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\x64\Debug\Pokemon.exe
