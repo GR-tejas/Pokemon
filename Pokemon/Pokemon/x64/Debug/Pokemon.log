@@ -1,3 +1,6 @@
 ﻿  Game.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Game.cpp(10,39): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Pokemon'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Game.cpp(10,84): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Pokemon'
+  main.cpp
+  WildEncounterManager.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\WildEncounterManager.cpp(8,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Pokemon.vcxproj -> C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\x64\Debug\Pokemon.exe

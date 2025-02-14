@@ -7,7 +7,7 @@
 using namespace std;
 
 Game::Game() {
-    forestGrass = {"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40}, Pokemon {"Caterpie", PokemonType::BUG, 35}}, 70};
+    forestGrass = {"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70};
 
     /*caveGrass = {
     "Cave",
