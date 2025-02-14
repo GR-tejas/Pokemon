@@ -1,8 +1,11 @@
 #pragma once
 #include <vector>
-#include "Grass.hpp"
+
+struct Grass;
+class Pokemon;
 
 class WildEncounterManager {
 public:
-	WildPokemon getRandomPokemonFromGrass(const Grass& grass);
-};	
+	WildEncounterManager();
+	Pokemon getRandomPokemonFromGrass(const Grass& grass);
+};

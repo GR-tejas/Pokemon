@@ -7,23 +7,19 @@
 using namespace std;
 
 Game::Game() {
-    forestGrass = {
-    "Forest",
-    {{"Pidgey", PokemonType::NORMAL, 40}, {"Caterpie", PokemonType::BUG, 35}},
-    70
-    };
+    forestGrass = {"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40}, Pokemon {"Caterpie", PokemonType::BUG, 35}}, 70};
 
-    caveGrass = {
+    /*caveGrass = {
     "Cave",
-    {{"Zubat", PokemonType::POISON, 30}, {"Geodude", PokemonType::ROCK, 50}},
+    {{"Zubat", PokemonType::POISON, 30, 10}, {"Geodude", PokemonType::ROCK, 50, 10}},
     80
     };
 
     shallowWater = {
     "Cave",
-    {{"Staryu", PokemonType::WATER, 40}, {"Tentacool", PokemonType::POISON, 40}},
+    {{"Staryu", PokemonType::WATER, 40, 10}, {"Tentacool", PokemonType::POISON, 40, 10}},
     80
-    };
+    };*/
 }
 
 void Game::gameLoop(Player& player) {
