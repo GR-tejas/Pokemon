@@ -1,16 +1,16 @@
-#include "Game.hpp"
-#include "Player.hpp"
-#include "PokemonType.hpp"
-#include "Utility.hpp"
-#include "WildEncounterManager.hpp"
-#include"BattleManager.hpp"
+#include "../../Header/Main/Game.hpp"
+#include "../../Header/Character/Player/Player.hpp"
+#include"../../Header/Pokemon/PokemonType.hpp"
+#include"../../Header/Utility/Utility.hpp"
+#include "../../Header/Battle/WildEncounterManager.hpp"
+#include "../../Header/Battle/BattleManager.hpp"
 #include <iostream>
 using namespace std;
 
 Game::Game() {
     forestGrass = {"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70};
 
-    /*caveGrass = {
+    caveGrass = {
     "Cave",
     {{"Zubat", PokemonType::POISON, 30, 10}, {"Geodude", PokemonType::ROCK, 50, 10}},
     80
@@ -20,7 +20,7 @@ Game::Game() {
     "Cave",
     {{"Staryu", PokemonType::WATER, 40, 10}, {"Tentacool", PokemonType::POISON, 40, 10}},
     80
-    };*/
+    };
 }
 
 void Game::gameLoop(Player& player) {

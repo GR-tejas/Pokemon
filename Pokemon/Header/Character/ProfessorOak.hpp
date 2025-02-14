@@ -2,8 +2,8 @@
 #include <iostream>
 #include <limits> // Include this header to use numeric_limits
 #include <string>
-#include"Utility.hpp"
-#include"Player.hpp"
+#include"../../Header/Utility/Utility.hpp"
+#include"../../Header/Character/Player/Player.hpp"
 using namespace std;
 
 class ProfessorOak {

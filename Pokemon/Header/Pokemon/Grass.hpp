@@ -1,8 +1,8 @@
 #pragma once
 #include<string>
 #include<vector>
-#include"Pokemon.hpp"
-#include"WildEncounterManager.hpp"
+#include"../../Header/Pokemon/Pokemon.hpp"
+#include"../../Header/Battle/WildEncounterManager.hpp"
 using namespace std;
 
 struct Grass {

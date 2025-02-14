@@ -1,10 +1,10 @@
 #pragma once
 #include<iostream>
 #include<string>
-#include "PokemonType.hpp"
-#include "PokemonChoice.hpp"
-#include "Utility.hpp"
-#include "Pokemon.hpp"
+#include"../../Header/Pokemon/PokemonType.hpp"
+#include"../../Header/Pokemon/PokemonChoice.hpp"
+#include"../../Header/Pokemon/Pokemon.hpp"
+#include"../../Header/Utility/Utility.hpp"
 using namespace std;
 
 class Pokemon;

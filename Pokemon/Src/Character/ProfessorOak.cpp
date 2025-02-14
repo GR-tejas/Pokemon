@@ -2,9 +2,9 @@
 #include <iostream>
 #include <limits> // Include this header to use numeric_limits
 #include <string>
-#include"Utility.hpp"
-#include"Player.hpp"
-#include"ProfessorOak.hpp"
+#include"../../Header/Utility/Utility.hpp"
+#include "../../Header/Character/Player/Player.hpp"
+#include"../../Header/Character/ProfessorOak.hpp"
 using namespace std;
 
     // Parameterized constructor

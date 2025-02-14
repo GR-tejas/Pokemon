@@ -2,7 +2,7 @@
 #include <iostream>
 #include <limits>
 #include <string>   
-#include "Pokemon.hpp"
+#include "../../Header/Pokemon/Pokemon.hpp"
 using namespace std;
 
     Pokemon::Pokemon() {

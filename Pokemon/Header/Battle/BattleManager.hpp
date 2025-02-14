@@ -1,7 +1,7 @@
 #pragma once
-#include "Pokemon.hpp"
-#include "Player.hpp"
-#include "BattleState.hpp"
+#include"../../Header/Battle/BattleState.hpp"
+#include"../../Header/Pokemon/Pokemon.hpp"
+#include"../../Header/Character/Player/Player.hpp"
 
 class BattleManager {
 public:

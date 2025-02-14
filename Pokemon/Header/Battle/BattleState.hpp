@@ -1,5 +1,5 @@
 #pragma once
-#include "Pokemon.hpp"
+#include"../../Header/Pokemon/Pokemon.hpp"
 
 struct BattleState {
     Pokemon* playerPokemon;

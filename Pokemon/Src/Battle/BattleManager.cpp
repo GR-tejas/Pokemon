@@ -1,6 +1,6 @@
 #include<iostream>
-#include "Pokemon.hpp"
-#include"BattleManager.hpp"
+#include"../../Header/Pokemon/Pokemon.hpp"
+#include"../../Header/Battle/BattleManager.hpp"
 
 using namespace std;
 
@@ -45,6 +45,8 @@ void BattleManager::handleBattleOutcome() {
         std::cout << "You defeated the wild " << battleState.wildPokemon->name << "!\\n";
     }
 }
+
+
 
 void BattleManager::updateBattleState() {
     if (battleState.playerPokemon->isFainted()) {

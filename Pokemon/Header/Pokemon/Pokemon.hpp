@@ -2,8 +2,8 @@
 #include <iostream>
 #include <limits>
 #include <string>
-#include "PokemonType.hpp"
-#include "PokemonChoice.hpp"
+#include"../../Header/Pokemon/PokemonType.hpp"
+#include"../../Header/Pokemon/PokemonChoice.hpp"
 using namespace std;
 
 class Pokemon {
