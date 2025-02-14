@@ -1,11 +1,15 @@
 #pragma once
 #include "Pokemon.hpp"
 #include "Player.hpp"
+#include "BattleState.hpp"
 
 class BattleManager {
 public:
     void startBattle(Player& player, Pokemon& wildPokemon);
 private:
-    void battle(Pokemon& playerPokemon, Pokemon& wildPokemon, Player& player);
-    void handleBattleOutcome(Player& player, bool playerWon);
+    BattleState battleState;  // New BattleState object to track the battle
+
+    void battle();
+    void handleBattleOutcome();
+    void updateBattleState(); // Method to update the battle state after each turn
 };
