@@ -1,4 +1,2 @@
 ﻿  BattleManager.cpp
-  Game.cpp
-C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\BattleManager.cpp(28,5): error C2664: 'void BattleManager::handleBattleOutcome(Player &,bool)': cannot convert argument 1 from 'Pokemon' to 'Player &'
-  Generating Code...
+  Pokemon.vcxproj -> C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\x64\Debug\Pokemon.exe

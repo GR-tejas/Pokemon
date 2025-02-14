@@ -7,15 +7,14 @@ using namespace std;
 void BattleManager::startBattle(Player& player, Pokemon& wildPokemon) 
 {
     std::cout << "A wild " << wildPokemon.name << " appeared!\n";
-    battle(player.chosenPokemon, wildPokemon);
+    battle(player.chosenPokemon, wildPokemon, player);
 }
 
-void BattleManager::battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
+void BattleManager::battle(Pokemon& playerPokemon, Pokemon& wildPokemon, Player& player) {
     while (!playerPokemon.isFainted() && !wildPokemon.isFainted()) 
     {
         playerPokemon.attack(wildPokemon);
 
-        // Check if wild Pokémon fainted
         if (!wildPokemon.isFainted()) 
         {
             wildPokemon.attack(playerPokemon);
@@ -24,11 +23,10 @@ void BattleManager::battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
         Utility::waitForEnter();
     }
 
-    // Determine and display the outcome of the battle
-    handleBattleOutcome(playerPokemon, wildPokemon.isFainted());//this function needs thes args
+    handleBattleOutcome(player, wildPokemon.isFainted());
 }
 
-void BattleManager::handleBattleOutcome(Player& player, bool playerWon) {//i need player here
+void BattleManager::handleBattleOutcome(Player& player, bool playerWon) {
     if (playerWon) {
         std::cout << player.chosenPokemon.name << " is victorious! Keep an eye on your Pokémon's health.\n";
     }
