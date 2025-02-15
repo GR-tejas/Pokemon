@@ -16,17 +16,13 @@ using namespace N_Pokemon;
 namespace N_Game
 {
     Game::Game() {
-        forestGrass = { "Forest", {N_Pokemon::Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, N_Pokemon::Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70 };
+        forestGrass = { "Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70 };
 
-        caveGrass = {
-        "Cave",
-        {{"Zubat", PokemonType::POISON, 30, 10}, {"Geodude", PokemonType::ROCK, 50, 10}},
-        80
-        };
+        caveGrass = {"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80};
 
         shallowWater = {
         "Cave",
-        {{"Staryu", PokemonType::WATER, 40, 10}, {"Tentacool", PokemonType::POISON, 40, 10}},
+        {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}},
         80
         };
     }
@@ -52,7 +48,7 @@ namespace N_Game
             switch (choice) {
             case 1: {
                 WildEncounterManager encounterManager;
-                N_Pokemon::Pokemon wildPokemon = encounterManager.getRandomPokemonFromGrass(N_Game::Game::forestGrass);
+                Pokemon wildPokemon = encounterManager.getRandomPokemonFromGrass(forestGrass);
                 battleManager.startBattle(player, wildPokemon);
                 break;
             }

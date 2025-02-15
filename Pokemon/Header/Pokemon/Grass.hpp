@@ -2,7 +2,6 @@
 #include<string>
 #include<vector>
 #include"../../Header/Pokemon/Pokemon.hpp"
-#include"../../Header/Battle/WildEncounterManager.hpp"
 using namespace std;
 
 namespace N_Pokemon

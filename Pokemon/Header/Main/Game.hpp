@@ -4,6 +4,7 @@
 
 using namespace N_Character;
 using namespace N_Player;
+using namespace N_Pokemon;
 
 namespace N_Game
 {
@@ -14,8 +15,8 @@ namespace N_Game
 		void gameLoop(Player& player);
 
 	private:
-		N_Pokemon::Grass forestGrass;
-		N_Pokemon::Grass caveGrass;
-		N_Pokemon::Grass shallowWater;
+		Grass forestGrass;
+		Grass caveGrass;
+		Grass shallowWater;
 	};
 }
