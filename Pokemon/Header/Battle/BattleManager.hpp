@@ -3,13 +3,22 @@
 #include"../../Header/Pokemon/Pokemon.hpp"
 #include"../../Header/Character/Player/Player.hpp"
 
-class BattleManager {
-public:
-    void startBattle(Player& player, Pokemon& wildPokemon);
-private:
-    BattleState battleState;  // New BattleState object to track the battle
+using namespace N_Character;
+using namespace N_Player;
 
-    void battle();
-    void handleBattleOutcome();
-    void updateBattleState(); // Method to update the battle state after each turn
-};
+namespace N_Battle
+{
+    
+
+    class BattleManager {
+    public:
+        void startBattle(Player& player, N_Pokemon::Pokemon& wildPokemon);
+    private:
+        BattleState battleState;
+
+        void battle();
+        void handleBattleOutcome();
+        void updateBattleState();
+    };
+}
+

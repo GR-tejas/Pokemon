@@ -1,11 +1,12 @@
-﻿  BattleManager.cpp
-  Game.cpp
+﻿  Game.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Battle\WildEncounterManager.hpp(16,65): error C2039: 'Grass': is not a member of 'N_Pokemon'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Main\Game.cpp(55,67): error C2664: 'N_Pokemon::Pokemon N_Battle::WildEncounterManager::getRandomPokemonFromGrass(const Grass &)': cannot convert argument 1 from 'N_Pokemon::Grass' to 'const Grass &'
   main.cpp
-  Player.cpp
-  Pokemon.cpp
-  ProfessorOak.cpp
-  Utility.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Battle\WildEncounterManager.hpp(16,65): error C2039: 'Grass': is not a member of 'N_Pokemon'
   WildEncounterManager.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Battle\WildEncounterManager.hpp(16,65): error C2039: 'Grass': is not a member of 'N_Pokemon'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(10,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(13,78): error C2872: 'Grass': ambiguous symbol
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(15,36): error C2027: use of undefined type 'Grass'
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(16,42): error C2027: use of undefined type 'Grass'
   Generating Code...
-C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(8,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Pokemon.vcxproj -> C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\x64\Debug\Pokemon.exe

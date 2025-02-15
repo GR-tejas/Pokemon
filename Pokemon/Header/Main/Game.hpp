@@ -1,16 +1,21 @@
 #pragma once
-#include "../../Header/Pokemon/Grass.hpp"
+#include "../Pokemon/Grass.hpp"
+#include"../Character/Player/Player.hpp"
 
-class Player;
+using namespace N_Character;
+using namespace N_Player;
 
-class Game {
+namespace N_Game
+{
+	class Game {
 
-public:
-	Game();
-	void gameLoop(Player& player);
+	public:
+		Game();
+		void gameLoop(Player& player);
 
-private:
-	Grass forestGrass;
-	Grass caveGrass;
-	Grass shallowWater;
-};
+	private:
+		N_Pokemon::Grass forestGrass;
+		N_Pokemon::Grass caveGrass;
+		N_Pokemon::Grass shallowWater;
+	};
+}

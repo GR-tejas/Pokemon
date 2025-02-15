@@ -3,11 +3,13 @@
 #include <limits> // Include this header to use numeric_limits
 #include <string>
 #include"../../Header/Utility/Utility.hpp"
-#include "../../Header/Character/Player/Player.hpp"
 #include"../../Header/Character/ProfessorOak.hpp"
 using namespace std;
 
-    // Parameterized constructor
+using namespace N_Utility;
+
+namespace N_Character
+{
     ProfessorOak::ProfessorOak(string p_name) { name = p_name; }
 
     void ProfessorOak::greetPlayer(Player& player) {
@@ -33,7 +35,6 @@ using namespace std;
             "you’ll need a Pokemon of your own!\n";
         Utility::waitForEnter();
 
-        // Presenting Pokemon choices
         cout
             << name
             << ": I have three Pokemon here with me. They’re all quite feisty!\n";
@@ -53,9 +54,7 @@ using namespace std;
         Utility::waitForEnter();
     }
 
-    // New method for the main quest conversation
     void ProfessorOak::explainMainQuest(Player& player) {
-        // Clear the console
         Utility::clearConsole();
 
         cout << "Professor Oak: " << player.name
@@ -111,3 +110,4 @@ using namespace std;
             "forget to set up the actual game loop... Ahem, onwards!\n";
         Utility::waitForEnter();
     }
+}

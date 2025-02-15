@@ -6,17 +6,22 @@
 #include"../../Header/Character/Player/Player.hpp"
 using namespace std;
 
-class ProfessorOak {
-public:
-    string name;
+namespace N_Character
+{
+    using namespace N_Player;
 
-    // Parameterized constructor
-    ProfessorOak(string p_name);
+    class ProfessorOak {
+    public:
+        string name;
 
-    void greetPlayer(Player& player);
+        // Parameterized constructor
+        ProfessorOak(string p_name);
 
-    void offerPokemonChoices(Player& player);
+        void greetPlayer(Player& player);
 
-    // New method for the main quest conversation
-    void explainMainQuest(Player& player);
-};
+        void offerPokemonChoices(Player& player);
+
+        // New method for the main quest conversation
+        void explainMainQuest(Player& player);
+    };
+}

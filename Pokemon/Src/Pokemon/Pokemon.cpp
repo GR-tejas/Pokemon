@@ -5,6 +5,8 @@
 #include "../../Header/Pokemon/Pokemon.hpp"
 using namespace std;
 
+namespace N_Pokemon
+{
     Pokemon::Pokemon() {
         name = "Unknown";
         type = PokemonType::NORMAL;
@@ -47,3 +49,5 @@ using namespace std;
     {
         health = maxHealth;
     }
+}
+    
