@@ -20,7 +20,7 @@ namespace N_Game
 
         caveGrass = {"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80};
 
-        shallowWater = {"Cave", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80};
+        shallowWater = {"water", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80};
     }
 
     void Game::gameLoop(Player& player) {
