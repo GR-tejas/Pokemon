@@ -10,10 +10,10 @@ namespace N_Battle
         srand(time(0));
     }
 
-    N_Pokemon::Pokemon WildEncounterManager::getRandomPokemonFromGrass(const Grass& grass) 
+    Pokemon WildEncounterManager::getRandomPokemonFromGrass(const Grass& grass) 
     {
         int randomIndex = rand() % grass.wildPokemonList.size();
-        N_Pokemon::Pokemon WildPokemon = grass.wildPokemonList[randomIndex];
+        Pokemon WildPokemon = grass.wildPokemonList[randomIndex];
         return WildPokemon;
     }
 }
