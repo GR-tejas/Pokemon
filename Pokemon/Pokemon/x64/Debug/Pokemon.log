@@ -1,4 +1,10 @@
-﻿  Caterpie.cpp
+﻿  Game.cpp
+  Player.cpp
+  Pokemon.cpp
+  Pidgey.cpp
+  Caterpie.cpp
   Pikachu.cpp
+  WildEncounterManager.cpp
+C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(10,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
   Pokemon.vcxproj -> C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\x64\Debug\Pokemon.exe

@@ -55,5 +55,15 @@ namespace N_Pokemon
     {
         health = maxHealth;
     }
+
+    string Pokemon::getName()
+    {
+        return (Pokemon::name);
+    }
+
+    void Pokemon::setName(string _name)
+    {
+        Pokemon::name = _name;
+    }
 }
     
