@@ -48,6 +48,15 @@
     <ClCompile Include="Src\Pokemon\Pokemons\Caterpie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Pokemon\Pokemons\Bulbasaur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Pokemon\Pokemons\Charmander.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Pokemon\Pokemons\Squirtle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Character\Player\Player.hpp">
@@ -90,6 +99,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Header\Pokemon\Pokemons\Caterpie.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\Pokemons\Bulbasaur.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\Pokemons\Charmander.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\Pokemons\Squitle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
