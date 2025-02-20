@@ -10,7 +10,7 @@ namespace N_Pokemon {
 
         private:
             int waterGun_dmg;
-            void waterGun(Pokemon& target);
+            void waterGun(Pokemon* target);
         };
 
     }

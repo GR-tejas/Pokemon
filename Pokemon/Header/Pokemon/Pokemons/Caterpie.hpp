@@ -10,7 +10,7 @@ namespace N_Pokemon {
 
         private:
             int bugBite_dmg;
-            void bugBite(Pokemon& target);
+            void bugBite(Pokemon* target);
         };
 
     }

@@ -10,7 +10,7 @@ namespace N_Pokemon {
 
         private:
             int wingAttack_dmg;
-            void WingAttack(Pokemon& target);
+            void WingAttack(Pokemon* target);
         };
     }
 }

@@ -16,14 +16,14 @@ using namespace N_Pokemon;
 namespace N_Game
 {
     Game::Game() {
-        forestGrass = {"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70 };
+        Grass* forestGrass = new Grass({"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70 });
 
-        caveGrass = {"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80};
+        Grass* caveGrass = new Grass({"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80});
 
-        shallowWater = {"water", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80};
+        Grass* shallowWater = new Grass({"water", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80});
     }
 
-    void Game::gameLoop(Player& player) {
+    void Game::gameLoop(Player* player) {
         BattleManager battleManager;
         bool keepPlaying = true;
 
@@ -44,14 +44,14 @@ namespace N_Game
             switch (choice) {
             case 1: {
                 WildEncounterManager encounterManager;
-                Pokemon wildPokemon = encounterManager.getRandomPokemonFromGrass(forestGrass);
+                Pokemon* wildPokemon = new Pokemon(encounterManager.getRandomPokemonFromGrass(forestGrass));
                 battleManager.startBattle(player, wildPokemon);
                 break;
             }
             case 2: {
                 std::cout << "You head to the PokeCenter.\n";
-                player.chosenPokemon.heal();
-                std::cout << player.chosenPokemon.getName() << "'s health is fully restored!\n";
+                player->chosenPokemon->heal();
+                std::cout << player->chosenPokemon->getName() << "'s health is fully restored!\n";
                 break;
             }
             case 5: {
@@ -67,7 +67,7 @@ namespace N_Game
             Utility::waitForEnter();
         }
 
-        std::cout << "Goodbye, " << player.name << "! Thanks for playing!\n";
+        std::cout << "Goodbye, " << player->name << "! Thanks for playing!\n";
     }
 }
 

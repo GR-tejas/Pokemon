@@ -18,11 +18,11 @@ namespace N_Pokemon
         Pokemon(std::string p_name, PokemonType p_type, int p_health, int p_attackPower);
 
         // Copy constructor
-        Pokemon(const Pokemon& other);
+        Pokemon(const Pokemon* other);
 
         ~Pokemon();
 
-        void attack(Pokemon& target);
+        void attack(Pokemon* target);
 
         void heal();
 
