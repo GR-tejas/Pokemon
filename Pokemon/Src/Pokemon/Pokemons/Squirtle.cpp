@@ -12,9 +12,9 @@ namespace N_Pokemon {
             waterGun_dmg = 15;
         }
 
-        void Squitle::waterGun(Pokemon& target) {
-            cout << name << " uses Thunder Shock on " << target.getName() << "!\n";
-            target.takeDamage(waterGun_dmg);
+        void Squitle::waterGun(Pokemon* target) {
+            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
+            target->takeDamage(waterGun_dmg);
         }
     }
 }

@@ -23,20 +23,20 @@ namespace N_Pokemon
         maxHealth = 100;
     }
 
-    Pokemon::Pokemon(const Pokemon& other) {
-        name = other.name;
-        type = other.type;
-        health = other.health;
-        attackPower = other.attackPower;
+    Pokemon::Pokemon(const Pokemon* other) {
+        name = other->name;
+        type = other->type;
+        health = other->health;
+        attackPower = other->attackPower;
         maxHealth = 100;
     }
 
     Pokemon::~Pokemon() { }
 
-    void Pokemon::attack(Pokemon& target) {
+    void Pokemon::attack(Pokemon* target) {
         int damage = attackPower; // Use attack power for damage calculation
-        cout << name << " attacks " << target.name << " for " << damage << " damage!\n";
-        target.takeDamage(damage);
+        cout << name << " attacks " << target->name << " for " << damage << " damage!\n";
+        target->takeDamage(damage);
     }
 
     void Pokemon::takeDamage(int damage)

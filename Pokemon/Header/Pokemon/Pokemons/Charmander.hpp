@@ -10,7 +10,7 @@ namespace N_Pokemon {
 
         private:
             int flameThrower_dmg;
-            void flameThrower(Pokemon& target);
+            void flameThrower(Pokemon* target);
         };
 
     }

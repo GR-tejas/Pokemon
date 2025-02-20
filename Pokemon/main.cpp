@@ -11,16 +11,16 @@ using namespace N_Player;
 
 int main() {
 
-	ProfessorOak professor("Professor Oak");
-	Player player;
+	ProfessorOak* professor = new ProfessorOak("Professor Oak");
+	Player* player = new Player();
 
-	professor.greetPlayer(player);
-	professor.offerPokemonChoices(player);
+	professor->greetPlayer(player);
+	professor->offerPokemonChoices(player);
 
-	professor.explainMainQuest(player);
+	professor->explainMainQuest(player);
 
-	Game game;
-	game.gameLoop(player);
+	Game* game = new Game();
+	game->gameLoop(player);
 
 	return 0;
 }

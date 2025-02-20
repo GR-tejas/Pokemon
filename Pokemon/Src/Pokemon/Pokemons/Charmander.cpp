@@ -12,9 +12,9 @@ namespace N_Pokemon {
             flameThrower_dmg = 15;
         }
 
-        void Charmander::flameThrower(Pokemon& target) {
-            cout << name << " uses Thunder Shock on " << target.getName() << "!\n";
-            target.takeDamage(flameThrower_dmg);
+        void Charmander::flameThrower(Pokemon* target) {
+            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
+            target->takeDamage(flameThrower_dmg);
         }
     }
 }

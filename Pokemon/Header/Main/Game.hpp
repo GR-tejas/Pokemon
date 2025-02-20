@@ -12,11 +12,11 @@ namespace N_Game
 
 	public:
 		Game();
-		void gameLoop(Player& player);
+		void gameLoop(Player* player);
 
 	private:
-		Grass forestGrass;
-		Grass caveGrass;
-		Grass shallowWater;
+		Grass* forestGrass;
+		Grass* caveGrass;
+		Grass* shallowWater;
 	};
 }
