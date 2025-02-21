@@ -10,7 +10,7 @@ namespace N_Pokemon {
 
         private:
             int leafBlade_dmg;
-            void leafBlade(Pokemon* target);
+            void attack(Pokemon* target) override;
         };
 
     }

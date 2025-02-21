@@ -33,11 +33,11 @@ namespace N_Pokemon
 
     Pokemon::~Pokemon() { }
 
-    void Pokemon::attack(Pokemon* target) {
-        int damage = attackPower; // Use attack power for damage calculation
-        cout << name << " attacks " << target->name << " for " << damage << " damage!\n";
-        target->takeDamage(damage);
-    }
+    //void Pokemon::attack(Pokemon* target) {
+    //    int damage = attackPower; // Use attack power for damage calculation
+    //    cout << name << " attacks " << target->name << " for " << damage << " damage!\n";
+    //    target->takeDamage(damage);
+    //}
 
     void Pokemon::takeDamage(int damage)
     {

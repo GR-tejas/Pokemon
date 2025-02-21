@@ -10,7 +10,7 @@ namespace N_Pokemon {
 
         private:
             int thunderShock_dmg;
-            void thunderShock(Pokemon* target);
+            void attack(Pokemon* target) override;
         };
 
     }
