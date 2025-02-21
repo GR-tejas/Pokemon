@@ -188,7 +188,7 @@
     <ClInclude Include="Header\Pokemon\Pokemons\Pidgey.hpp" />
     <ClInclude Include="Header\Pokemon\Pokemons\Caterpie.hpp" />
     <ClInclude Include="Header\Pokemon\Pokemons\Pikachu.hpp" />
-    <ClInclude Include="Header\Pokemon\Pokemons\Squitle.hpp" />
+    <ClInclude Include="Header\Pokemon\Pokemons\Squirtle.hpp" />
     <ClInclude Include="Header\Pokemon\PokemonType.hpp" />
     <ClInclude Include="Header\Character\ProfessorOak.hpp" />
     <ClInclude Include="Header\Utility\Utility.hpp" />

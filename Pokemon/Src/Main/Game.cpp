@@ -1,9 +1,4 @@
 #include "../../Header/Main/Game.hpp"
-#include "../../Header/Character/Player/Player.hpp"
-#include"../../Header/Pokemon/PokemonType.hpp"
-#include"../../Header/Utility/Utility.hpp"
-#include "../../Header/Battle/WildEncounterManager.hpp"
-#include "../../Header/Battle/BattleManager.hpp"
 #include <iostream>
 using namespace std;
 
@@ -12,15 +7,16 @@ using namespace N_Utility;
 using namespace N_Character;
 using namespace N_Player;
 using namespace N_Pokemon;
+using namespace N_Pokemons;
 
 namespace N_Game
 {
     Game::Game() {
-        Grass* forestGrass = new Grass({"Forest", {Pokemon {"Pidgey", PokemonType::NORMAL, 40, 10}, Pokemon {"Caterpie", PokemonType::BUG, 35, 10}}, 70 });
+        Grass* forestGrass = new Grass({"Forest", {new Pidgey() , new Caterpie()}, 70});
 
-        Grass* caveGrass = new Grass({"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80});
+        //Grass* caveGrass = new Grass({"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80});
 
-        Grass* shallowWater = new Grass({"water", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80});
+        //Grass* shallowWater = new Grass({"water", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80});
     }
 
     void Game::gameLoop(Player* player) {
@@ -29,7 +25,7 @@ namespace N_Game
 
         while (keepPlaying) {
             Utility::clearConsole();
-            std::cout << "\nWhat would you like to do next, " << player.name << "?\n";
+            std::cout << "\nWhat would you like to do next, " << player->name << "?\n";
             std::cout << "1. Battle Wild Pokémon\n";
             std::cout << "2. Visit PokeCenter\n";
             std::cout << "3. Challenge Gyms\n";
@@ -44,7 +40,8 @@ namespace N_Game
             switch (choice) {
             case 1: {
                 WildEncounterManager encounterManager;
-                Pokemon* wildPokemon = new Pokemon(encounterManager.getRandomPokemonFromGrass(forestGrass));
+                //Pokemon* wildPokemon = new Pokemon(encounterManager.getRandomPokemonFromGrass(forestGrass));
+
                 battleManager.startBattle(player, wildPokemon);
                 break;
             }
@@ -69,5 +66,10 @@ namespace N_Game
 
         std::cout << "Goodbye, " << player->name << "! Thanks for playing!\n";
     }
+
+    Game::~Game() {
+        delete(wildPokemon);
+    }
+
 }
 

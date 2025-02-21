@@ -4,9 +4,9 @@
 namespace N_Pokemon {
     namespace N_Pokemons {
 
-        class Squitle : public Pokemon {
+        class Squirtle : public Pokemon {
         public:
-            Squitle();
+            Squirtle();
 
         private:
             int waterGun_dmg;

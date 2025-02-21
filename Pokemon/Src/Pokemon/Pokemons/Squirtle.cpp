@@ -1,4 +1,4 @@
-#include "../../../Header/Pokemon/Pokemons/Squitle.hpp"
+#include "../../../Header/Pokemon/Pokemons/Squirtle.hpp"
 #include "../../../Header/Pokemon/PokemonType.hpp"
 #include <iostream>
 
@@ -7,12 +7,12 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Squitle::Squitle() : Pokemon("Squitle", PokemonType::ELECTRIC, 100, 20)
+        Squirtle::Squirtle() : Pokemon("Squirtle", PokemonType::ELECTRIC, 100, 20)
         {
             waterGun_dmg = 15;
         }
 
-        void Squitle::attack(Pokemon* target) {
+        void Squirtle::attack(Pokemon* target) {
             cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
             target->takeDamage(waterGun_dmg);
         }
