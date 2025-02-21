@@ -14,18 +14,18 @@ namespace N_Character
     {
         Player::Player() {
             name = "Trainer";
-            Pokemon* chosenPokemon = new Pokemon(); // Using the default Pokemon constructor
+            //Pokemon* chosenPokemon = new Pokemon(); // should i do this after i have done the chosepokemon thing?
         }
 
-        Player::Player(string p_name, Pokemon* p_chosenPokemon) {
+        Player::Player(string p_name, /*Pokemon* p_chosenPokemon*/) {
             name = p_name;
-            chosenPokemon = p_chosenPokemon;
+            //chosenPokemon = p_chosenPokemon;
         }
 
         void Player::choosePokemon(int choice) {
             switch ((N_Pokemon::PokemonChoice)choice) {
             case N_Pokemon::PokemonChoice::CHARMANDER:
-                Pokemon* chosenPokemon = new Pokemon("Charmander", N_Pokemon::PokemonType::FIRE, 100, 10);
+                chosenPokemon = new Charmander();
                 break;
             case N_Pokemon::PokemonChoice::BULBASAUR:
                 Pokemon* chosenPokemon = new Pokemon("Bulbasaur", N_Pokemon::PokemonType::GRASS, 100, 10);
