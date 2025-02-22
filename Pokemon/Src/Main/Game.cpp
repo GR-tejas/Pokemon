@@ -6,13 +6,12 @@ using namespace N_Battle;
 using namespace N_Utility;
 using namespace N_Character;
 using namespace N_Player;
-using namespace N_Pokemon;
 using namespace N_Pokemons;
 
 namespace N_Game
 {
     Game::Game() {
-        Grass* forestGrass = new Grass({"Forest", {new Pidgey() , new Caterpie()}, 70});
+        forestGrass = {"Forest", {new Pidgey() , new Caterpie()}, 70};
 
         //Grass* caveGrass = new Grass({"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80});
 
@@ -22,6 +21,7 @@ namespace N_Game
     void Game::gameLoop(Player* player) {
         BattleManager battleManager;
         bool keepPlaying = true;
+        WildEncounterManager encounterManager;
 
         while (keepPlaying) {
             Utility::clearConsole();
@@ -39,8 +39,7 @@ namespace N_Game
 
             switch (choice) {
             case 1: {
-                WildEncounterManager encounterManager;
-                //Pokemon* wildPokemon = new Pokemon(encounterManager.getRandomPokemonFromGrass(forestGrass));
+                wildPokemon = encounterManager.getRandomPokemonFromGrass(forestGrass);
 
                 battleManager.startBattle(player, wildPokemon);
                 break;

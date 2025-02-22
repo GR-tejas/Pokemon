@@ -22,7 +22,7 @@ namespace N_Game
 		void gameLoop(Player* player);
 
 	private:
-		Grass* forestGrass;
+		Grass forestGrass;
 		Pokemon* wildPokemon;
 
 		//Grass* caveGrass;

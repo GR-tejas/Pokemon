@@ -1,7 +1,7 @@
 #pragma once
 #include<iostream>
 #include<string>
-//#include"../../../Header/Pokemon/Pokemon.hpp"
+#include"../../../Header/Pokemon/Pokemon.hpp"
 #include"../../../Header/Pokemon/Pokemons/Charmander.hpp"
 #include"../../../Header/Pokemon/Pokemons/Squirtle.hpp"
 #include"../../../Header/Pokemon/Pokemons/Pikachu.hpp"
@@ -16,7 +16,7 @@ namespace N_Character
         class Player {
         public:
             string name;
-            Pokemon* chosenPokemon;
+            N_Pokemon::Pokemon* chosenPokemon;
 
             // Default constructor
             Player();

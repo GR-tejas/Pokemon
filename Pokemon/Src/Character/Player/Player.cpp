@@ -1,6 +1,10 @@
 #pragma once
 #include "../../../Header/Character/Player/Player.hpp"
 #include <iostream>
+#include"../../../Header/Pokemon/Pokemons/Charmander.hpp"
+#include"../../../Header/Pokemon/Pokemons/Squirtle.hpp"
+#include"../../../Header/Pokemon/Pokemons/Pikachu.hpp"
+#include"../../../Header/Pokemon/Pokemons/Bulbasaur.hpp"
 using namespace std;
 
 using namespace N_Utility;
@@ -13,6 +17,7 @@ namespace N_Character
     {
         Player::Player() {
             name = "Trainer";
+            chosenPokemon = nullptr;
         }
 
         Player::Player(string p_name) {
@@ -25,13 +30,13 @@ namespace N_Character
                 chosenPokemon = new Charmander();
                 break;
             case N_Pokemon::PokemonChoice::BULBASAUR:
-                Pokemon* chosenPokemon = new Bulbasaur();
+                chosenPokemon = new Bulbasaur();
                 break;
             case N_Pokemon::PokemonChoice::SQUIRTLE:
-                Pokemon* chosenPokemon = new Squirtle();
+                chosenPokemon = new Squirtle();
                 break;
             default:
-                Pokemon* chosenPokemon = new Pikachu();
+                chosenPokemon = new Pikachu();
                 break;
             }
             cout << "Player " << name << " chose " << chosenPokemon->getName() << "!\n";
