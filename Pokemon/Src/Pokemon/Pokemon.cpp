@@ -13,15 +13,14 @@ namespace N_Pokemon
         name = "Unknown";
         type = PokemonType::NORMAL;
         health = 50;
-        attackPower = 10;
         maxHealth = 100;
     }
 
-    Pokemon::Pokemon(string p_name, PokemonType p_type, int p_health, int p_attackPower) {
+    Pokemon::Pokemon(string p_name, PokemonType p_type, int p_health, vector<Move> p_moves) {
         name = p_name;
         type = p_type;
         health = p_health;
-        attackPower = p_attackPower;
+        moves = p_moves;
         maxHealth = 100;
     }
 
@@ -29,7 +28,6 @@ namespace N_Pokemon
         name = other->name;
         type = other->type;
         health = other->health;
-        attackPower = other->attackPower;
         maxHealth = 100;
     }
 
@@ -84,11 +82,9 @@ namespace N_Pokemon
 
     Pokemon::~Pokemon() { }
 
-    //void Pokemon::attack(Pokemon* target) {
-    //    int damage = attackPower; // Use attack power for damage calculation
-    //    cout << name << " attacks " << target->name << " for " << damage << " damage!\n";
-    //    target->takeDamage(damage);
-    //}
+    void Pokemon::attack(Move selectedMove, Pokemon* target) {
+        target->takeDamage(selectedMove.power);
+    }
 
     void Pokemon::takeDamage(int damage)
     {

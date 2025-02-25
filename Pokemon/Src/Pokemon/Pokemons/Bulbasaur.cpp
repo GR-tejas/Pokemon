@@ -7,14 +7,13 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Bulbasaur::Bulbasaur() : Pokemon("Bulbasaur", PokemonType::ELECTRIC, 100, 20)
+        Bulbasaur::Bulbasaur() : Pokemon("Bulbasaur", PokemonType::GRASS, 100, {Move("Leaf Blade", 25), Move("Vine Whip", 20) })
         {
-            leafBlade_dmg = 15;
+
         }
 
-        void Bulbasaur::attack(Pokemon* target) {
-            cout << name << " uses Leaf Blade on " << target->getName() << "!\n";
-            target->takeDamage(leafBlade_dmg);
+        void Bulbasaur::attack(Move selectedMove, Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }

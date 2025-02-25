@@ -7,15 +7,12 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Charmander::Charmander() : Pokemon("Charmander", PokemonType::ELECTRIC, 100, 20)
+        Charmander::Charmander() : Pokemon("Charmander", PokemonType::FIRE, 100, {Move("Flame Thrower", 25), Move("Ember", 20)})
         {
-            cout << "1";
-            flameThrower_dmg = 15;
         }
 
-        void Charmander::attack(Pokemon* target) {
-            cout << name << " uses Flamethrower on " << target->getName() << "!\n";
-            target->takeDamage(flameThrower_dmg);
+        void Charmander::attack(Move selectedMove, Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }

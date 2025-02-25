@@ -7,14 +7,12 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Pikachu::Pikachu() : Pokemon("Pikachu", PokemonType::ELECTRIC, 100, 20) 
+        Pikachu::Pikachu() : Pokemon("Pikachu", PokemonType::ELECTRIC, 100, {Move("Thunder Blot", 25), Move("Iron tail", 20), Move("Quick Attack", 15)})
         {
-            thunderShock_dmg = 15;
         }
 
-        void Pikachu::attack(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
-            target->takeDamage(thunderShock_dmg);
+        void Pikachu::attack(Move selectedMove, Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }

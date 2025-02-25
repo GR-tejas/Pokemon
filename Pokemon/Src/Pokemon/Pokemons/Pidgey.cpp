@@ -7,14 +7,12 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Pidgey::Pidgey() : Pokemon("Pidgey", PokemonType::NORMAL, 100, 20) 
+        Pidgey::Pidgey() : Pokemon("Pidgey", PokemonType::NORMAL, 100, {Move("Wing Attack",15), Move("Peck", 10)})
         {
-            wingAttack_dmg = 15;
         }
 
-        void Pidgey::attack(Pokemon* target) {
-            cout << name << " uses Wing Attack on " << target->getName() << "!\n";
-            target->takeDamage(wingAttack_dmg);
+        void Pidgey::attack(Move selectedMove, Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }

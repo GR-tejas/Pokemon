@@ -1,9 +1,10 @@
 ﻿  BattleManager.cpp
   Game.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\BattleManager.cpp(25,44): error C2660: 'N_Pokemon::Pokemon::attack': function does not take 1 arguments
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\BattleManager.cpp(29,42): error C2660: 'N_Pokemon::Pokemon::attack': function does not take 1 arguments
   main.cpp
   Player.cpp
   Pokemon.cpp
-C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Pokemon\Pokemon.cpp(71,13): error C2660: 'N_Pokemon::Pokemon::attack': function does not take 2 arguments
   ProfessorOak.cpp
   Bulbasaur.cpp
   Charmander.cpp

@@ -7,14 +7,12 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Caterpie::Caterpie() : Pokemon("Pikachu", PokemonType::ELECTRIC, 100, 20)
+        Caterpie::Caterpie() : Pokemon("Caterpie", PokemonType::BUG, 100, {Move("Bug Bite", 20), Move("Tail Whip", 15)})
         {
-            bugBite_dmg = 15;
         }
 
-        void Caterpie::attack(Pokemon* target) {
-            cout << name << " uses Bug Bite on " << target->getName() << "!\n";
-            target->takeDamage(bugBite_dmg);
+        void Caterpie::attack(Move selectedMove, Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }

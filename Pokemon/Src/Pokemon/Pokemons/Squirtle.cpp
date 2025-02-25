@@ -7,14 +7,13 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Squirtle::Squirtle() : Pokemon("Squirtle", PokemonType::ELECTRIC, 100, 20)
+        Squirtle::Squirtle() : Pokemon("Squirtle", PokemonType::WATER, 100, {Move("Water gun", 20), Move("Tackle", 15)})
         {
-            waterGun_dmg = 15;
+            
         }
 
-        void Squirtle::attack(Pokemon* target) {
-            cout << name << " uses Water Gun on " << target->getName() << "!\n";
-            target->takeDamage(waterGun_dmg);
+        void Squirtle::attack(Move selectedMove, Pokemon* target) {
+            selectAndUseMove(target);
         }
     }
 }
