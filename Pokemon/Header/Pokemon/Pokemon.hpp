@@ -2,8 +2,11 @@
 #include <iostream>
 #include <limits>
 #include <string>
-#include"../../Header/Pokemon/PokemonType.hpp"
-#include"../../Header/Pokemon/PokemonChoice.hpp"
+#include<vector>
+#include"../Utility/Utility.hpp"
+#include"../Pokemon/Move.hpp"
+#include"../Pokemon/PokemonType.hpp"
+#include"../Pokemon/PokemonChoice.hpp"
 using namespace std;
 
 struct Move;
@@ -46,5 +49,8 @@ namespace N_Pokemon
         vector<Move> moves;
 
         void selectAndUseMove(Pokemon* target);
+        void printAvailableMoves();
+        int selectMove();
+        void useMove(Move selectedMove, Pokemon* target);
     };
 }

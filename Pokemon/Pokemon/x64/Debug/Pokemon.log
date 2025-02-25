@@ -1,45 +1,16 @@
 ﻿  BattleManager.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  WildEncounterManager.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(12,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Player.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  ProfessorOak.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
   Game.cpp
-  Pokemon.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  Bulbasaur.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  Caterpie.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  Charmander.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  Pidgey.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  Pikachu.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
-  Squirtle.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,15): error C2143: syntax error: missing ';' before '<'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Header\Pokemon\Pokemon.hpp(46,27): error C2238: unexpected token(s) preceding ';'
   main.cpp
+  Player.cpp
+  Pokemon.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Pokemon\Pokemon.cpp(71,13): error C2660: 'N_Pokemon::Pokemon::attack': function does not take 2 arguments
+  ProfessorOak.cpp
+  Bulbasaur.cpp
+  Charmander.cpp
+  Pidgey.cpp
+  Caterpie.cpp
+  Pikachu.cpp
+  Squirtle.cpp
+  WildEncounterManager.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(12,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
