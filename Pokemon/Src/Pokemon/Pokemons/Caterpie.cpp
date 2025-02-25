@@ -13,7 +13,7 @@ namespace N_Pokemon {
         }
 
         void Caterpie::attack(Pokemon* target) {
-            cout << name << " uses Wing Attack on " << target->getName() << "!\n";
+            cout << name << " uses Bug Bite on " << target->getName() << "!\n";
             target->takeDamage(bugBite_dmg);
         }
     }

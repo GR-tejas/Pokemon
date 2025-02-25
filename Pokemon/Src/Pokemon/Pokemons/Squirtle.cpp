@@ -13,7 +13,7 @@ namespace N_Pokemon {
         }
 
         void Squirtle::attack(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
+            cout << name << " uses Water Gun on " << target->getName() << "!\n";
             target->takeDamage(waterGun_dmg);
         }
     }

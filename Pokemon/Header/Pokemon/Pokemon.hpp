@@ -6,6 +6,8 @@
 #include"../../Header/Pokemon/PokemonChoice.hpp"
 using namespace std;
 
+struct Move;
+
 namespace N_Pokemon
 {
     class Pokemon {
@@ -41,5 +43,8 @@ namespace N_Pokemon
         int health;
         int maxHealth;
         int attackPower;
+        vector<Move> moves;
+
+        void selectAndUseMove(Pokemon* target);
     };
 }

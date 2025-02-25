@@ -13,7 +13,7 @@ namespace N_Pokemon {
         }
 
         void Bulbasaur::attack(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
+            cout << name << " uses Leaf Blade on " << target->getName() << "!\n";
             target->takeDamage(leafBlade_dmg);
         }
     }

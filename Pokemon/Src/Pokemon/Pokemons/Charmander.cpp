@@ -9,11 +9,12 @@ namespace N_Pokemon {
 
         Charmander::Charmander() : Pokemon("Charmander", PokemonType::ELECTRIC, 100, 20)
         {
+            cout << "1";
             flameThrower_dmg = 15;
         }
 
         void Charmander::attack(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
+            cout << name << " uses Flamethrower on " << target->getName() << "!\n";
             target->takeDamage(flameThrower_dmg);
         }
     }
