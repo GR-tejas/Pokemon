@@ -12,7 +12,18 @@ namespace N_Pokemon {
         }
 
         void Pidgey::attack(Move selectedMove, Pokemon* target) {
-            selectAndUseMove(target);
+            Pokemon::attack(selectedMove, target);
+
+            if (selectedMove.name == "GUST")
+            {
+                // 20% chance to blow the opponent away
+                if (rand() % 100 < 20)
+                {
+                    std::cout << "... and blew the opponent away!\n";
+                    N_Battle::BattleManager::stopBattle();
+                    N_Utility::Utility::waitForEnter();
+                }
+            }
         }
     }
 }

@@ -83,7 +83,7 @@ namespace N_Pokemon
     Pokemon::~Pokemon() { }
 
     void Pokemon::attack(Move selectedMove, Pokemon* target) {
-        target->takeDamage(selectedMove.power);
+        target->takeDamage((selectedMove.power + attackBonus));
     }
 
     void Pokemon::takeDamage(int damage)
@@ -111,6 +111,11 @@ namespace N_Pokemon
     void Pokemon::setName(string _name)
     {
         Pokemon::name = _name;
+    }
+
+    void Pokemon::reduceAttackPower(int reducedDamage)
+    {
+        attackBonus -= reducedDamage;
     }
 }
     

@@ -12,7 +12,20 @@ namespace N_Pokemon {
         }
 
         void Pikachu::attack(Move selectedMove, Pokemon* target) {
-            selectAndUseMove(target);
+            if (selectedMove.name == "THUNDER BOLT")
+            {
+                // 80% chance to hit
+                if (rand() % 100 < 80)
+                {
+                    Pokemon::attack(selectedMove, target);
+                    std::cout << "... and it hit successfully!\n";
+                }
+                else
+                    std::cout << "... but it missed!\n";
+            }
+            else
+                Pokemon::attack(selectedMove, target);
+
         }
     }
 }

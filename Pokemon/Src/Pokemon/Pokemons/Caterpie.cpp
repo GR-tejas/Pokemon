@@ -7,12 +7,20 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Caterpie::Caterpie() : Pokemon("Caterpie", PokemonType::BUG, 100, {Move("Bug Bite", 20), Move("Tail Whip", 15)})
+        Caterpie::Caterpie() : Pokemon("Caterpie", PokemonType::BUG, 100, {Move("Bug Bite", 20), Move("STICKY WEB", 10)})
         {
         }
 
         void Caterpie::attack(Move selectedMove, Pokemon* target) {
-            selectAndUseMove(target);
+            Pokemon::attack(selectedMove, target);
+
+            if (selectedMove.name == "STICKY WEB")
+            {
+                // Reduce the target's next attack damage (for simplicity, reducing by a fixed value)
+                int reducedDamage = 5;
+                target->reduceAttackPower(reducedDamage);
+                std::cout << target->getName() << "'s next attack will be reduced by " << reducedDamage << " damage!\n";
+            }
         }
     }
 }

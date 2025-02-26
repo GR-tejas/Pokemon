@@ -42,13 +42,15 @@ namespace N_Pokemon
 
         void selectAndUseMove(Pokemon* target);
 
+        void reduceAttackPower(int reducedDamage);
+
     protected:
         string name;
         PokemonType type;
         int health;
         int maxHealth;
         vector<Move> moves;
-
+        int attackBonus = 0;
         
         void printAvailableMoves();
         int selectMove();

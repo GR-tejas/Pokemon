@@ -13,7 +13,19 @@ namespace N_Pokemon {
         }
 
         void Bulbasaur::attack(Move selectedMove, Pokemon* target) {
-            selectAndUseMove(target);
+            Pokemon::attack(selectedMove, target);
+
+            if (selectedMove.name == "Vine Whip") {
+                // Chance for a second hit (50% chance)
+                int secondHitChance = rand() % 2;
+
+                if (secondHitChance == 1) {
+                    Pokemon::attack(selectedMove, target);
+                    std::cout << name << " hits again with a second " << selectedMove.name << "!\n";
+                }
+                else
+                    std::cout << target->getName() << " dodged the second hit!\n";
+            }
         }
     }
 }
