@@ -7,14 +7,20 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Charmander::Charmander() : Pokemon("Charmander", PokemonType::ELECTRIC, 100, 20)
+        Charmander::Charmander() : Pokemon("Charmander", PokemonType::FIRE, 100, {Move("Flame Thrower", 25), Move("Ember", 20)})
         {
-            flameThrower_dmg = 15;
         }
 
-        void Charmander::flameThrower(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
-            target->takeDamage(flameThrower_dmg);
+        void Charmander::attack(Move selectedMove, Pokemon* target) {
+            Pokemon::attack(selectedMove, target);
+
+            if (selectedMove.name == "BLAZING CHARGE")
+            {
+                // Recoil effect: Charmander takes recoil damage
+                this->takeDamage(10); // Fixed recoil damage
+                std::cout << name << " takes 10 recoil damage from the Blazing Charge!\n";
+                N_Utility::Utility::waitForEnter();
+            }
         }
     }
 }

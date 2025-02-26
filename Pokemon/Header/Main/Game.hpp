@@ -1,6 +1,12 @@
 #pragma once
 #include "../Pokemon/Grass.hpp"
-#include"../Character/Player/Player.hpp"
+#include "../../Header/Character/Player/Player.hpp"
+//#include"../../Header/Pokemon/PokemonType.hpp"
+#include"../../Header/Utility/Utility.hpp"
+#include "../../Header/Battle/WildEncounterManager.hpp"
+#include "../../Header/Battle/BattleManager.hpp"
+#include"../../Header/Pokemon/Pokemons/Pidgey.hpp"
+#include"../../Header/Pokemon/Pokemons/Caterpie.hpp"
 
 using namespace N_Character;
 using namespace N_Player;
@@ -12,11 +18,14 @@ namespace N_Game
 
 	public:
 		Game();
+		~Game();
 		void gameLoop(Player* player);
 
 	private:
-		Grass* forestGrass;
-		Grass* caveGrass;
-		Grass* shallowWater;
+		Grass forestGrass;
+		Pokemon* wildPokemon;
+
+		//Grass* caveGrass;
+		//Grass* shallowWater;
 	};
 }

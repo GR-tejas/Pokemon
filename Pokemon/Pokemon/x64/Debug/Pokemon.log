@@ -1,8 +1,17 @@
-﻿  Bulbasaur.cpp
+﻿  BattleManager.cpp
+  Game.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\BattleManager.cpp(25,44): error C2660: 'N_Pokemon::Pokemon::attack': function does not take 1 arguments
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\BattleManager.cpp(29,42): error C2660: 'N_Pokemon::Pokemon::attack': function does not take 1 arguments
+  main.cpp
+  Player.cpp
+  Pokemon.cpp
+  ProfessorOak.cpp
+  Bulbasaur.cpp
   Charmander.cpp
   Pidgey.cpp
   Caterpie.cpp
   Pikachu.cpp
   Squirtle.cpp
+  WildEncounterManager.cpp
+C:\Users\wasis\Desktop\Project\Duck_Hunt\Pokemon\Pokemon\Src\Battle\WildEncounterManager.cpp(12,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
-  Pokemon.vcxproj -> C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\x64\Debug\Pokemon.exe

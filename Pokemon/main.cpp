@@ -22,5 +22,8 @@ int main() {
 	Game* game = new Game();
 	game->gameLoop(player);
 
+	delete(professor);
+	delete(player);
+
 	return 0;
 }

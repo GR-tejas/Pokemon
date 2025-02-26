@@ -12,7 +12,7 @@ namespace N_Battle
     public:
         void startBattle(Player* player, N_Pokemon::Pokemon* wildPokemon);
     private:
-        BattleState* battleState;
+        BattleState battleState;
 
         void battle();
         void handleBattleOutcome();

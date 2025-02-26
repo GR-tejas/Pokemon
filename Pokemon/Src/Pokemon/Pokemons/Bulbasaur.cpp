@@ -7,14 +7,25 @@ namespace N_Pokemon {
 
         using namespace std;
 
-        Bulbasaur::Bulbasaur() : Pokemon("Bulbasaur", PokemonType::ELECTRIC, 100, 20)
+        Bulbasaur::Bulbasaur() : Pokemon("Bulbasaur", PokemonType::GRASS, 100, {Move("Leaf Blade", 25), Move("Vine Whip", 20) })
         {
-            leafBlade_dmg = 15;
+
         }
 
-        void Bulbasaur::leafBlade(Pokemon* target) {
-            cout << name << " uses Thunder Shock on " << target->getName() << "!\n";
-            target->takeDamage(leafBlade_dmg);
+        void Bulbasaur::attack(Move selectedMove, Pokemon* target) {
+            Pokemon::attack(selectedMove, target);
+
+            if (selectedMove.name == "Vine Whip") {
+                // Chance for a second hit (50% chance)
+                int secondHitChance = rand() % 2;
+
+                if (secondHitChance == 1) {
+                    Pokemon::attack(selectedMove, target);
+                    std::cout << name << " hits again with a second " << selectedMove.name << "!\n";
+                }
+                else
+                    std::cout << target->getName() << " dodged the second hit!\n";
+            }
         }
     }
 }

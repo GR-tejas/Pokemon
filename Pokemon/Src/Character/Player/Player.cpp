@@ -1,12 +1,15 @@
 #pragma once
 #include "../../../Header/Character/Player/Player.hpp"
-#include"../../../Header/Pokemon/Pokemon.hpp"
-#include"../../../Header/Utility/Utility.hpp"
 #include <iostream>
+#include"../../../Header/Pokemon/Pokemons/Charmander.hpp"
+#include"../../../Header/Pokemon/Pokemons/Squirtle.hpp"
+#include"../../../Header/Pokemon/Pokemons/Pikachu.hpp"
+#include"../../../Header/Pokemon/Pokemons/Bulbasaur.hpp"
 using namespace std;
 
 using namespace N_Utility;
 using namespace N_Pokemon;
+using namespace N_Pokemons;
 
 namespace N_Character
 {
@@ -14,27 +17,26 @@ namespace N_Character
     {
         Player::Player() {
             name = "Trainer";
-            Pokemon* chosenPokemon = new Pokemon(); // Using the default Pokemon constructor
+            chosenPokemon = nullptr;
         }
 
-        Player::Player(string p_name, Pokemon* p_chosenPokemon) {
+        Player::Player(string p_name) {
             name = p_name;
-            chosenPokemon = p_chosenPokemon;
         }
 
         void Player::choosePokemon(int choice) {
             switch ((N_Pokemon::PokemonChoice)choice) {
             case N_Pokemon::PokemonChoice::CHARMANDER:
-                Pokemon* chosenPokemon = new Pokemon("Charmander", N_Pokemon::PokemonType::FIRE, 100, 10);
+                chosenPokemon = new Charmander();
                 break;
             case N_Pokemon::PokemonChoice::BULBASAUR:
-                Pokemon* chosenPokemon = new Pokemon("Bulbasaur", N_Pokemon::PokemonType::GRASS, 100, 10);
+                chosenPokemon = new Bulbasaur();
                 break;
             case N_Pokemon::PokemonChoice::SQUIRTLE:
-                Pokemon* chosenPokemon = new Pokemon("Squirtle", N_Pokemon::PokemonType::WATER, 100, 10);
+                chosenPokemon = new Squirtle();
                 break;
             default:
-                Pokemon* chosenPokemon = new Pokemon("Pikachu", N_Pokemon::PokemonType::ELECTRIC, 100, 10);
+                chosenPokemon = new Pikachu();
                 break;
             }
             cout << "Player " << name << " chose " << chosenPokemon->getName() << "!\n";

@@ -2,9 +2,14 @@
 #include <iostream>
 #include <limits>
 #include <string>
-#include"../../Header/Pokemon/PokemonType.hpp"
-#include"../../Header/Pokemon/PokemonChoice.hpp"
+#include<vector>
+#include"../Utility/Utility.hpp"
+#include"../Pokemon/Move.hpp"
+#include"../Pokemon/PokemonType.hpp"
+#include"../Pokemon/PokemonChoice.hpp"
 using namespace std;
+
+struct Move;
 
 namespace N_Pokemon
 {
@@ -15,14 +20,14 @@ namespace N_Pokemon
         Pokemon();
 
         // Parameterized constructor
-        Pokemon(std::string p_name, PokemonType p_type, int p_health, int p_attackPower);
+        Pokemon(std::string p_name, PokemonType p_type, int p_health, vector<Move> p_moves);
 
         // Copy constructor
         Pokemon(const Pokemon* other);
 
         ~Pokemon();
 
-        void attack(Pokemon* target);
+        virtual void attack(Move selectedMove, Pokemon* target) = 0;
 
         void heal();
 
@@ -35,11 +40,20 @@ namespace N_Pokemon
 
         void setName(string _name);
 
+        void selectAndUseMove(Pokemon* target);
+
+        void reduceAttackPower(int reducedDamage);
+
     protected:
         string name;
         PokemonType type;
         int health;
         int maxHealth;
-        int attackPower;
+        vector<Move> moves;
+        int attackBonus = 0;
+        
+        void printAvailableMoves();
+        int selectMove();
+        void useMove(Move selectedMove, Pokemon* target);
     };
 }

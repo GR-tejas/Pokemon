@@ -107,7 +107,10 @@
     <ClInclude Include="Header\Pokemon\Pokemons\Charmander.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Pokemon\Pokemons\Squitle.hpp">
+    <ClInclude Include="Header\Pokemon\Pokemons\Squirtle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\Move.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
