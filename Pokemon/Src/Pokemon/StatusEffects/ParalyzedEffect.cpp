@@ -1,5 +1,5 @@
 #include "../../../Header/Pokemon/StatusEffects/ParalyzedEffect.hpp"
-//#include "../../../Header/Pokemon/StatusEffects/StatusEffectType.hpp"
+#include "../../../Header/Pokemon/StatusEffects/StatusEffectType.hpp"
 #include <iostream>
 
 namespace N_Pokemon
