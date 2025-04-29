@@ -18,26 +18,19 @@ namespace N_Battle
     }
     //className* ptrname; declaration
     //ptrname->name;
-    void BattleManager::battle() {
-        while (battleState.battleOngoing) {
-            if (battleState.playerTurn) {
-                // Player's turn to attack
+    void BattleManager::battle()
+    {
+        while (battleState.battleOngoing)
+        {
+            if (battleState.playerTurn && battleState.playerPokemon->canAttack())
                 battleState.playerPokemon->selectAndUseMove(battleState.wildPokemon);
-            }
-            else {
-                // Wild Pokémon's turn to attack
+            else if (battleState.wildPokemon->canAttack())
                 battleState.wildPokemon->selectAndUseMove(battleState.playerPokemon);
-            }
 
-            // Update the battle state after the turn
             updateBattleState();
-
-            // Switch turns
             battleState.playerTurn = !battleState.playerTurn;
-
             Utility::waitForEnter();
         }
-
         handleBattleOutcome();
     }
 

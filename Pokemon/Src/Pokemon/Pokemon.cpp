@@ -7,8 +7,11 @@ using namespace std;
 
 using namespace N_Utility;
 
+
 namespace N_Pokemon
 {
+    using namespace N_StatusEffects;
+
     Pokemon::Pokemon() {
         name = "Unknown";
         type = PokemonType::NORMAL;
@@ -79,8 +82,43 @@ namespace N_Pokemon
                 cout << target->name << " has " << target->health << " HP left.\n";
         }
 
+        bool Pokemon::canAttack()
+        {
+            if (appliedEffect == nullptr)
+                return true;
+            else
+                return appliedEffect->turnEndEffect(this);
+        }
 
-    Pokemon::~Pokemon() { }
+        bool Pokemon::canApplyEffect() 
+        { 
+            return appliedEffect == nullptr; 
+        }
+
+        void Pokemon::applyEffect(StatusEffectType effectToApply)
+        {
+            switch (effectToApply)
+            {
+            case StatusEffectType::PARALYZED:
+                appliedEffect = new ParalyzedEffect();
+                appliedEffect->applyEffect(this);
+                break;
+            default:
+                appliedEffect = nullptr;
+            }
+        }
+
+        void Pokemon::clearEffect() { appliedEffect = nullptr; }
+
+        void Pokemon::printAvailableMoves()
+        {
+            cout << name << "'s available moves:\n";
+
+            // List out all moves for the player to choose from
+            for (size_t i = 0; i < moves.size(); ++i) {
+                cout << i + 1 << ": " << moves[i].name << " (Power: " << moves[i].power << ")\n";
+            }
+        }
 
     void Pokemon::attack(Move selectedMove, Pokemon* target) {
         target->takeDamage((selectedMove.power + attackBonus));
@@ -117,5 +155,9 @@ namespace N_Pokemon
     {
         attackBonus -= reducedDamage;
     }
+
+
+
+    Pokemon::~Pokemon() { }
 }
     

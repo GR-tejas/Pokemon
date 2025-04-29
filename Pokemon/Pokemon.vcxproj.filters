@@ -57,6 +57,9 @@
     <ClCompile Include="Src\Pokemon\Pokemons\Squirtle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Pokemon\StatusEffects\ParalyzedEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Character\Player\Player.hpp">
@@ -111,6 +114,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Header\Pokemon\Move.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\StatusEffects\IStatusEffect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\StatusEffects\ParalyzedEffect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Pokemon\StatusEffects\StatusEffectType.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
