@@ -1,3 +1,5 @@
-﻿  Game.cpp
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Game.cpp(10,39): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Pokemon'
-C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\Game.cpp(10,84): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Pokemon'
+﻿  BattleManager.cpp
+  Game.cpp
+  Pokemon.cpp
+  Generating Code...
+  Pokemon.vcxproj -> C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\x64\Debug\Pokemon.exe

@@ -1,9 +1,13 @@
 #include <iostream>
 #include <limits>
 #include <string>
-#include "Game.hpp"
-#include "Player.hpp"
-#include "ProfessorOak.hpp"
+#include "Header/Main/Game.hpp"
+#include "Header/Character/Player/Player.hpp"
+#include "Header/Character/ProfessorOak.hpp"
+
+using namespace N_Character;
+using namespace N_Game;
+using namespace N_Player;
 
 int main() {
 
