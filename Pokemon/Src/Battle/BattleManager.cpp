@@ -13,7 +13,7 @@ namespace N_Battle
         battleState.wildPokemon = &wildPokemon;
         battleState.playerTurn = true;  // Player starts first
         battleState.battleOngoing = true;
-        std::cout << "A wild " << wildPokemon.name << " appeared!\n";
+        std::cout << "A wild " << wildPokemon.getName() << " appeared!\n";
         battle();
     }
 
@@ -42,10 +42,10 @@ namespace N_Battle
 
     void BattleManager::handleBattleOutcome() {
         if (battleState.playerPokemon->isFainted()) {
-            std::cout << battleState.playerPokemon->name << " has fainted! You lose the battle.\n";
+            std::cout << battleState.playerPokemon->getName() << " has fainted! You lose the battle.\n";
         }
         else {
-            std::cout << "You defeated the wild " << battleState.wildPokemon->name << "!\n";
+            std::cout << "You defeated the wild " << battleState.wildPokemon->getName() << "!\n";
         }
     }
 

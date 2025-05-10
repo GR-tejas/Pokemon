@@ -10,12 +10,7 @@ namespace N_Pokemon
 {
     class Pokemon {
     public:
-        string name;
-        PokemonType type;
-        int health;
-        int maxHealth;
-        int attackPower;
-
+        
         // Default constructor
         Pokemon();
 
@@ -34,5 +29,17 @@ namespace N_Pokemon
         void takeDamage(int damage);
 
         bool isFainted() const;
+
+        //getters and setters
+        string getName();
+
+        void setName(string _name);
+
+    protected:
+        string name;
+        PokemonType type;
+        int health;
+        int maxHealth;
+        int attackPower;
     };
 }

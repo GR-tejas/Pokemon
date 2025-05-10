@@ -20,7 +20,7 @@ namespace N_Game
 
         caveGrass = {"Cave", {Pokemon {"Zubat", PokemonType::POISON, 30, 10}, Pokemon {"Geodude", PokemonType::ROCK, 50, 10}}, 80};
 
-        shallowWater = {"Cave", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80};
+        shallowWater = {"water", {Pokemon {"Staryu", PokemonType::WATER, 40, 10}, Pokemon {"Tentacool", PokemonType::POISON, 40, 10}}, 80};
     }
 
     void Game::gameLoop(Player& player) {
@@ -51,7 +51,7 @@ namespace N_Game
             case 2: {
                 std::cout << "You head to the PokeCenter.\n";
                 player.chosenPokemon.heal();
-                std::cout << player.chosenPokemon.name << "'s health is fully restored!\n";
+                std::cout << player.chosenPokemon.getName() << "'s health is fully restored!\n";
                 break;
             }
             case 5: {

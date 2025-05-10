@@ -1,5 +1,8 @@
-﻿  BattleManager.cpp
-  Game.cpp
-  Pokemon.cpp
+﻿  Bulbasaur.cpp
+  Charmander.cpp
+  Pidgey.cpp
+  Caterpie.cpp
+  Pikachu.cpp
+  Squirtle.cpp
   Generating Code...
   Pokemon.vcxproj -> C:\Users\wasis\OneDrive\Desktop\My repos\Pokemon\Pokemon\x64\Debug\Pokemon.exe
